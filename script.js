@@ -6,6 +6,9 @@ const searchButton = document.getElementById('searchButton');
 const locationElement = document.getElementById('location');
 const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
+const humidityElement = document.getElementById('humidity');
+const windElement = document.getElementById('wind');
+const feelsLikeElement = document.getElementById('feels-like');
 const p = document.getElementById('p1');
 
 // Event listener for search button
@@ -61,14 +64,24 @@ function fetchWeatherByCoords(lat, lon) {
 
 // Function to fetch weather data and update UI
 function fetchWeather(url) {
+    p.textContent = "Loading..."; // Show loading message
+
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Weather data not available.');
+            }
+            return response.json();
+        })
         .then(data => {
             const weather = data.weather[0].main.toLowerCase();
 
             locationElement.textContent = data.name;
-            temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
-            descriptionElement.textContent = data.weather[0].description;
+            temperatureElement.textContent = `Temperature: ${Math.round(data.main.temp)}°C`;
+            descriptionElement.textContent = `Condition: ${data.weather[0].description}`;
+            humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
+            windElement.textContent = `Wind Speed: ${data.wind.speed} m/s`;
+            feelsLikeElement.textContent = `Feels Like: ${Math.round(data.main.feels_like)}°C`;
 
             // Update background image based on weather
             switch (weather) {
@@ -96,8 +109,11 @@ function fetchWeather(url) {
                     document.body.style.backgroundImage = "url('default.jpg')"; // Default background
                     break;
             }
+
+            p.textContent = ""; // Clear loading message
         })
-        .catch(() => {
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
             p.textContent = "Please check your location or try again later.";
         });
 }
@@ -111,6 +127,9 @@ function resetToDefault() {
     locationElement.textContent = '';
     temperatureElement.textContent = '';
     descriptionElement.textContent = '';
+    humidityElement.textContent = '';
+    windElement.textContent = '';
+    feelsLikeElement.textContent = '';
     p.textContent = '';
     document.body.style.backgroundImage = "url('default.jpg')";
 }
