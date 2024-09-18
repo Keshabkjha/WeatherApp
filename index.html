@@ -11,8 +11,10 @@
     <!-- Main Content Container -->
     <div class="container">
         <h1>Weather App</h1>
-        <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>
+        <form id="weatherForm">
+            <input type="text" id="locationInput" placeholder="Enter a city" aria-label="Enter city">
+            <button id="searchButton" aria-label="Search">Search</button>
+        </form>
         <div class="weather-info">
             <h2 id="location"></h2>
             <p id="temperature"></p>
@@ -20,18 +22,24 @@
             <p id="humidity"></p>
             <p id="wind"></p>
             <p id="feels-like"></p>
+            <p id="pressure"></p>
+            <p id="visibility"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+            <p id="uv-index"></p>
         </div>
         <!-- Loading or Error Messages -->
         <p id="p1"></p>
+        <div id="loadingSpinner" class="spinner"></div>
     </div>
     
     <!-- Footer Section -->
     <footer>
-        <p id="pBy"><span class="keshab-kumar"></span><span>Developed by</span></p>
-        <p id="pMe"><a href="https://linktr.ee/Keshabkjha">Keshab Kumar</a></p>
+        <p id="pBy"><span>Developed by</span></p>
+        <p id="pMe"><a href="https://linktr.ee/Keshabkjha" aria-label="Keshab Kumar's profile">Keshab Kumar</a></p>
     </footer>
 
     <!-- JavaScript File -->
     <script src="script.js"></script>
-</body>
+</body> 
 </html>
