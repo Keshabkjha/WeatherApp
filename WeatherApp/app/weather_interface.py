@@ -5,7 +5,6 @@ import os
 import streamlit as st
 import altair as alt
 
-
 class WeatherApp:
     """
     WeatherApp class to display weather information and forecast  using streamlit.
