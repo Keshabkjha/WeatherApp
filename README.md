@@ -1,12 +1,13 @@
 # WeatherApp
 
-Welcome to the WeatherApp! This is a simple and intuitive web application that provides real-time weather information based on your current location or any manually searched location. The app is built using HTML, CSS, JavaScript, and the OpenWeatherMap API.
+Welcome to the WeatherApp! This is a simple and intuitive web application that provides real-time weather information based on your current location or any manually searched location. The app is built using HTML, CSS, JavaScript, Python (for chatbot functionality), and the OpenWeatherMap API.
 
 ## Features
 
 - **Automatic Location Detection:** The app requests access to your current location and automatically displays the weather information for that location.
 - **Manual Search:** If you want to check the weather for a different location, simply enter the city name in the search bar.
 - **Real-Time Data:** The app fetches up-to-date weather data from the OpenWeatherMap API, ensuring you get the latest information.
+- **Weatha Chatbot:** The app includes a chatbot called **Weatha**, built using Python frameworks like Streamlit and SpaCy. Weatha responds to user queries about weather conditions in specific locations and displays real-time information directly in the app.
 
 ## Live Demo
 
@@ -25,17 +26,28 @@ To run this project locally:
     cd WeatherApp
     ```
 3. Open `index.html` in your web browser.
+4. To run the chatbot:
+    - Install the required Python packages for Streamlit and SpaCy:
+      ```bash
+      pip install -r requirements.txt
+      ```
+    - Run the chatbot using Streamlit:
+      ```bash
+      streamlit run main.py
+      ```
 
 ## Usage
 
 - **Automatic Weather Display:** Upon opening the app, it will ask for permission to access your location. Once granted, it will automatically display the current weather information for your location.
 - **Manual Weather Search:** Enter the name of any city in the search bar to retrieve the weather details for that location.
+- **Weatha Chatbot:** You can interact with the Weatha chatbot by asking weather-related questions for different cities, and it will provide real-time weather information using the OpenWeatherMap API.
 
 ## Technologies Used
 
 - **HTML:** For structuring the app's content.
 - **CSS:** For styling the user interface.
 - **JavaScript:** For handling user interactions and making API requests.
+- **Python (Streamlit & SpaCy):** For building the Weatha chatbot.
 - **OpenWeatherMap API:** For fetching real-time weather data.
 
 ## Terms of Use
