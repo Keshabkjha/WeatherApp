@@ -16,7 +16,8 @@ const sunsetElement = document.getElementById('sunset');
 const uvIndexElement = document.getElementById('uv-index');
 const loadingSpinner = document.getElementById('loadingSpinner');
 const p = document.getElementById('p1');
-
+const chatbotButton = document.getElementById('chatbotButton');
+const chatbotInterface = document.getElementById('chatbotInterface');
 // Function to show/hide loading spinner
 function toggleLoading(show) {
     // @ts-ignore
@@ -153,6 +154,14 @@ function fetchUVIndex(lat, lon) {
         });
 }
 
+// Toggle the chatbot interface when the button is clicked
+chatbotButton.addEventListener('click', () => {
+    if (chatbotInterface.style.display === 'none' || chatbotInterface.style.display === '') {
+        chatbotInterface.style.display = 'block';
+    } else {
+        chatbotInterface.style.display = 'none';
+    }
+});
 // Function to format Unix timestamp to human-readable time
 function formatTime(unixTimestamp) {
     const date = new Date(unixTimestamp * 1000);

@@ -32,7 +32,18 @@
         <p id="p1"></p>
         <div id="loadingSpinner" class="spinner"></div>
     </div>
-    
+    <!-- Chatbot Icon -->
+    <div id="chatbot-container">
+        <button id="chatbotButton" aria-label="Open Chatbot">
+            <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
+        </button>
+    </div>
+
+    <!-- Chatbot Interface (initially hidden) -->
+    <div id="chatbotInterface" class="chatbot-iframe">
+        <iframe src="https://keshabkjha-weatherbot.streamlit.app/" title="Weather Chatbot" id="chatbotFrame"></iframe>
+    </div>
+
     <!-- Footer Section -->
     <footer>
         <p id="pBy"><span>Developed by</span></p>
