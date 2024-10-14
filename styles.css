@@ -70,7 +70,7 @@ h1 {
 
 /* Footer Container Styling */
 footer {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color:transparent;
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -80,7 +80,7 @@ footer {
 }
 
 /* Developed By Styling */
-#pBy, #pMe {
+#pMe {
     margin: 5px 0;
     font-size: 14px;
 }
