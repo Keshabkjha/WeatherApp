@@ -1,0 +1,12 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+[theme]
+base = "dark"
+primaryColor = "#4B8BBE"
+
+[global]
+# Disable file watcher for performance (optional)
+disableWatchdogWarning = true
