@@ -39,10 +39,20 @@
         </button>
     </div>
 
-    <!-- Chatbot Interface (initially hidden) -->
-    <div id="chatbotInterface" class="chatbot-iframe">
-        <iframe src="https://kweatherapp.streamlit.app/" title="Weather Chatbot" id="chatbotFrame"></iframe>
+    <<!-- Chatbot Icon -->
+    <div id="chatbot-container">
+        <button id="chatbotButton" aria-label="Open Chatbot" onclick="openWeatherBot()">
+            <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
+        </button>
     </div>
+
+    <!-- Script to open the weather bot -->
+    <script>
+        function openWeatherBot() {
+            window.open('https://kweatherapp.streamlit.app/', '_blank');
+        }
+    </script>
+
 
     <!-- Footer Section -->
     <footer>
