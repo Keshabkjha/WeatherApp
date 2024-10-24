@@ -3,77 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <title>WeatherApp</title>
+    <title>Weather App</title>
     <link rel="icon" href="weather-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1> <span style="font-size: 2.2rem;">WeatherApp</span></h1>
+    <!-- Main Content Container -->
     <div class="container">
-
-        <div class="weather-input">
-            <h3>Enter Your City</h3>
-            <input class="city-input" type="text" placeholder="E.g.,New York, Delhi, Tokyo etc.">
-            <button class="search-btn">Search</button>
-            <div class="separator"></div>
-            <button class="location-btn">Use Current Location</button>
+        <h1>Weather App</h1>
+        <form id="weatherForm">
+            <input type="text" id="locationInput" placeholder="Enter a city" aria-label="Enter city">
+            <button id="searchButton" aria-label="Search">Search</button>
+        </form>
+        <div class="weather-info">
+            <h2 id="location"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="feels-like"></p>
+            <p id="pressure"></p>
+            <p id="visibility"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+            <p id="uv-index"></p>
         </div>
-
-        <div class="weather-data">
-            <div class="current-weather">
-                <div class="details">
-                    <h2>(your city) (date)</h2>
-                    <h4>Temprature : _____°C</h4>
-                    <h4>Wind : ____ M/S</h4>
-                    <h4>Humidity : ____%</h4>
-                </div>
-
-                <div class="icon">
-                    <h4>(weather status)</h4>
-                </div>
-            </div>
-            <div class="days-forecast">
-                <h2>Five Days Forecast</h2>
-                <ul class="weather-card">
-                    <li class="card">
-                        <h2>(your city) (date)</h2>
-                        <h4>Temprature : _____°C</h4>
-                        <h4>Wind : ____ M/S</h4>
-                        <h4>Humidity : ____%</h4>
-                    </li>
-                    <li class="card">
-                        <h2>(your city) (date)</h2>
-                        <h4>Temprature : _____°C</h4>
-                        <h4>Wind : ____ M/S</h4>
-                        <h4>Humidity : ____%</h4>
-                    </li>
-                    <li class="card">
-                        <h2>(your city) (date)</h2>
-                        <h4>Temprature : _____°C</h4>
-                        <h4>Wind : ____ M/S</h4>
-                        <h4>Humidity : ____%</h4>
-                    </li>
-                    <li class="card">
-                        <h2>(your city) (date)</h2>
-                        <h4>Temprature : _____°C</h4>
-                        <h4>Wind : ____ M/S</h4>
-                        <h4>Humidity : ____%</h4>
-                    </li>
-                    <li class="card">
-                        <h2>(your city) (date)</h2>
-                        <h4>Temprature : _____°C</h4>
-                        <h4>Wind : ____ M/S</h4>
-                        <h4>Humidity : ____%</h4>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
+        <!-- Loading or Error Messages -->
+        <p id="p1"></p>
+        <div id="loadingSpinner" class="spinner"></div>
     </div>
     <!-- Chatbot Icon -->
+    <div id="chatbot-container">
+        <button id="chatbotButton" aria-label="Open Chatbot">
+            <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
+        </button>
+    </div>
+
+    <<!-- Chatbot Icon -->
     <div id="chatbot-container">
         <button id="chatbotButton" aria-label="Open Chatbot" onclick="openWeatherBot()">
             <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
@@ -87,10 +53,13 @@
         }
     </script>
 
+
     <!-- Footer Section -->
     <footer>
         <p id="pMe">&copy; 2024 <a href="https://linktr.ee/Keshabkjha" aria-label="Keshab Kumar's profile"> Keshabkjha </a>All rights reserved.</p>
     </footer>
-</body>
 
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body> 
 </html>
