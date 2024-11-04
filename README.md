@@ -11,7 +11,7 @@ Welcome to the ClimaSense! This is a simple and intuitive web application that p
 
 ## Live Demo
 
-Check out the live version of the app [here](https://keshabkjha.github.io/WeatherApp/).
+Check out the live version of the app [here](https://keshabkjha.github.io/ClimaSense/).
 
 ## Installation
 
