@@ -1,6 +1,6 @@
-# WeatherApp
+# ClimaSense
 
-Welcome to the WeatherApp! This is a simple and intuitive web application that provides real-time weather information based on your current location or any manually searched location. The app is built using HTML, CSS, JavaScript, Python (for chatbot functionality), and the OpenWeatherMap API.
+Welcome to the ClimaSense! This is a simple and intuitive web application that provides real-time weather information based on your current location or any manually searched location. The app is built using HTML, CSS, JavaScript, Python (for chatbot functionality), and the OpenWeatherMap API.
 
 ## Features
 
@@ -19,11 +19,11 @@ To run this project locally:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Keshabkjha/WeatherApp.git
+    git clone https://github.com/Keshabkjha/ClimaSense.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd WeatherApp
+    cd ClimaSense
     ```
 3. Open `index.html` in your web browser.
 4. To run the chatbot:
@@ -60,7 +60,7 @@ If you have suggestions for improving this app or want to contribute, feel free 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Keshabkjha/WeatherApp/tree/main?tab=MIT-1-ov-file) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Keshabkjha/ClimaSense/tree/main?tab=MIT-1-ov-file) file for details.
 
 ## Acknowledgments
 
